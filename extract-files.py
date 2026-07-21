@@ -103,6 +103,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libSNPE.so': blob_fixup()
         .call(rename_snpe_cxxabi_symbols, need_tmp_dir=False)
         .add_needed('libsnpe_cxxabi_shim.so'),
+    'vendor/etc/libnfc-nxp.conf': blob_fixup()
+        .regex_replace('DEVICE_HOST_WHITE_LIST', 'DEVICE_HOST_ALLOW_LIST'),
     'vendor/lib64/libssccalapi@2.0.so': blob_fixup()
         .sig_replace('A0 7F 00 94', '1F 20 03 D5')
         .sig_replace('94 7F 00 94', '1F 20 03 D5'),
