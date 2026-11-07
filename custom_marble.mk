@@ -7,10 +7,10 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelOS stuff
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_marble
+PRODUCT_NAME := custom_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -23,3 +23,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=marble_global
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# PixelOS
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
