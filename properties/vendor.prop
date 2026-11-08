@@ -2,6 +2,20 @@
 vendor.display.idle_time=0
 vendor.display.override_doze_mode=1
 
+# Display (Cape values: init.qti.display_boot.sh has no case for Ukee, soc_id 591)
+vendor.display.disable_cwb_idle_fallback=1
+vendor.display.enable_allow_idle_fallback=1
+vendor.display.enable_perf_hint_large_comp_cycle=1
+vendor.display.enable_posted_start_dyn=2
+vendor.display.enable_qsync_idle=1
+vendor.display.enable_rotator_ui=1
+vendor.display.enable_spec_fence=0
+vendor.display.target.version=2
+vendor.display.thermal.version=1
+vendor.gralloc.enable_snapalloc=1
+vendor.gralloc.hw_supports_ubwcp=0
+vendor.gralloc.use_dma_buf_heaps=1
+
 # Fingerprint
 persist.vendor.fingerprint.type=side
 persist.vendor.fingerprint.sensor_location=1080|920|210|local:4630946370515662722,1080|920|210|local:4630946480857061762
