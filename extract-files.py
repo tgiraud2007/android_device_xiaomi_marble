@@ -72,8 +72,14 @@ def rename_snpe_cxxabi_symbols(ctx, file, file_path, *args, **kwargs):
 
 
 blob_fixups: blob_fixups_user_type = {
+    # Route camera.qcom.so's GetFormat import to the Xiaomi-aware shim
+    # (libcamximageformatutils_shim); "GetFormat" and "GetXiaomi" are the same length.
     'vendor/lib64/hw/camera.qcom.so': blob_fixup()
-        .add_needed('libcamximageformatutils_shim.so'),
+        .add_needed('libcamximageformatutils_shim.so')
+        .binary_regex_replace(
+            b'_ZN4CamX16ImageFormatUtils9GetFormatERNS_17GrallocPropertiesERNS_6FormatE',
+            b'_ZN4CamX16ImageFormatUtils9GetXiaomiERNS_17GrallocPropertiesERNS_6FormatE',
+        ),
     (
         'vendor/etc/camera/marble_enhance_motiontuning.xml',
         'vendor/etc/camera/marble_motiontuning.xml',
