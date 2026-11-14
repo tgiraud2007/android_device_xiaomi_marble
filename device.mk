@@ -20,6 +20,7 @@ PRODUCT_COPY_FILES += \
 # Call the MiuiCamera setup
 $(call inherit-product-if-exists, device/xiaomi/miuicamera-marble/device.mk)
 $(call soong_config_set,camera,package_name,com.android.camera)
+$(call soong_config_set,libcameraservice,ext_lib,//device/xiaomi/marble:libcameraservice_extension.xiaomi_marble)
 
 # Init scripts
 PRODUCT_COPY_FILES += \
