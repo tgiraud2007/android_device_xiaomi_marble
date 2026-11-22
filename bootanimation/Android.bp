@@ -5,8 +5,7 @@
 
 prebuilt_media {
     name: "bootanimation_marble",
-    filename: "bootanimation.zip",
+    filename: "bootanimation_marble.zip",
     product_specific: true,
     src: "bootanimation.zip",
-    overrides: ["bootanimation_pixelos"],
 }
