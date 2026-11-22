@@ -1,6 +1,5 @@
 # Display
 vendor.display.idle_time=0
-vendor.display.override_doze_mode=1
 
 # Display (Cape values: init.qti.display_boot.sh has no case for Ukee, soc_id 591)
 vendor.display.disable_cwb_idle_fallback=1
