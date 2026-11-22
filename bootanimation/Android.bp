@@ -1,0 +1,12 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_media {
+    name: "bootanimation_marble",
+    filename: "bootanimation.zip",
+    product_specific: true,
+    src: "bootanimation.zip",
+    overrides: ["bootanimation_pixelos"],
+}
