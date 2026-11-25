@@ -2,6 +2,7 @@
 ro.config.vc_call_vol_steps=11
 
 # Display
+ro.vendor.display.dolbyvision.support=true
 vendor.display.idle_time=0
 
 # Display (Cape values: init.qti.display_boot.sh has no case for Ukee, soc_id 591)
