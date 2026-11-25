@@ -27,3 +27,18 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # PixelOS
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
+
+# Updater
+ifneq ($(IS_OFFICIAL),true)
+PRODUCT_PACKAGES += \
+    Updater
+
+PRODUCT_COPY_FILES += \
+    vendor/custom/config/permissions/privapp-permissions-custom.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-custom.xml
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    net.pixelos.build_type=unofficial
+endif
+
+PRODUCT_PACKAGES += \
+    UpdaterResMarble

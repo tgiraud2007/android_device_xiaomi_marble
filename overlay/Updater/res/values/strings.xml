@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/tgiraud2007/pixelos_ota/{branch}/API/updater/{device}.json</string>
+    <string name="changelog_url" translatable="false">https://raw.githubusercontent.com/tgiraud2007/pixelos_ota/{branch}/API/updater/changelogs/{device}.md</string>
+    <string name="report_issue_url" translatable="false">https://t.me/ThomasBuildsChat</string>
+</resources>
